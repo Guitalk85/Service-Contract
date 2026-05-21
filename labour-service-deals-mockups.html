@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Service Deals — Labour · Mockup set v1 · BFC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.34.0/iconfont/tabler-icons.min.css">
+<style>
+:root {
+  --bfc-green: #1B8438;
+  --bfc-green-bright: #22A04A;
+  --bfc-green-dark: #0E5F2C;
+  --bfc-green-pale: #EBF6EE;
+  --bfc-green-pale2: #F4FBF6;
+  --bfc-amber: #F0B000;
+  --bfc-amber-pale: #FFF8E1;
+  --bfc-amber-dark: #7A4D00;
+  --bfc-red: #C7321A;
+  --bfc-red-pale: #FCE9E7;
+  --bfc-yellow-box: #FDF6E3;
+  --bfc-yellow-box-border: #F5E5BA;
+  --bfc-grey-50: #FAFAFA;
+  --bfc-grey-100: #F4F4F4;
+  --bfc-grey-200: #E5E5E5;
+  --bfc-grey-300: #D0D0D0;
+  --bfc-grey-400: #BBBBBB;
+  --bfc-grey-500: #888888;
+  --bfc-grey-700: #666666;
+  --bfc-grey-900: #1A1A1A;
+  --doc-bg: #F0F2F5;
+  --doc-card: #FFFFFF;
+  --doc-text: #2D3748;
+  --doc-text-mute: #6B7280;
+  --doc-border: #DCDFE4;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  background: var(--doc-bg);
+  color: var(--doc-text);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Top bar */
+.docnav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--doc-border);
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.docnav-title {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--doc-text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.docnav-title i { color: var(--bfc-green); }
+.docnav-meta {
+  font-size: 12px;
+  color: var(--doc-text-mute);
+}
+.docnav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.docnav-link {
+  font-size: 12px;
+  color: var(--doc-text-mute);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.1s, color 0.1s;
+  white-space: nowrap;
+}
+.docnav-link:hover { background: var(--bfc-green-pale); color: var(--bfc-green-dark); }
+
+/* Hero */
+.hero {
+  padding: 48px 32px 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 8px;
+  color: var(--doc-text);
+  letter-spacing: -0.5px;
+}
+.hero .lede {
+  font-size: 15px;
+  color: var(--doc-text-mute);
+  margin: 0 0 16px;
+  line-height: 1.6;
+  max-width: 720px;
+}
+.hero-meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--doc-text-mute);
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 1px solid var(--doc-border);
+  border-radius: 8px;
+  margin-top: 16px;
+}
+.hero-meta b { color: var(--doc-text); font-weight: 500; }
+
+/* Sections */
+.section {
+  padding: 40px 32px 24px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: var(--bfc-green);
+  color: #FFFFFF;
+  border-radius: 50%;
+  font-weight: 500;
+  font-size: 13px;
+  margin-right: 10px;
+}
+.section h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: var(--doc-text);
+  display: flex;
+  align-items: center;
+}
+.section .blurb {
+  font-size: 14px;
+  color: var(--doc-text-mute);
+  margin: 0 0 20px;
+  line-height: 1.6;
+  padding-left: 38px;
+}
+
+/* Mockup frame */
+.frame {
+  background: var(--doc-card);
+  border: 1px solid var(--doc-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.frame-label {
+  padding: 10px 16px;
+  background: var(--bfc-grey-50);
+  border-bottom: 1px solid var(--doc-border);
+  font-size: 11px;
+  color: var(--doc-text-mute);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.frame-tag {
+  font-size: 10px;
+  color: var(--bfc-green-dark);
+  background: var(--bfc-green-pale);
+  padding: 2px 8px;
+  border-radius: 8px;
+  letter-spacing: 0.3px;
+  text-transform: none;
+}
+.frame-body { padding: 0; }
+.frame-body.padded { padding: 20px; background: var(--bfc-grey-100); }
+.frame-body.modal-stage { padding: 32px 20px; background: rgba(45, 55, 72, 0.4); display: flex; align-items: flex-start; justify-content: center; min-height: 200px; }
+
+/* Notes */
+.notes {
+  padding: 14px 18px;
+  background: var(--bfc-green-pale2);
+  border-left: 3px solid var(--bfc-green);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--doc-text);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+.notes strong { color: var(--bfc-green-dark); font-weight: 500; }
+.notes ul { margin: 6px 0 0; padding-left: 18px; }
+.notes li { margin-bottom: 4px; }
+
+/* === BFC APP STYLES === */
+.app { font-family: 'IBM Plex Sans', sans-serif; color: var(--bfc-grey-900); background: #FFFFFF; }
+.app-head {
+  background: var(--bfc-green);
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: #FFFFFF;
+  font-size: 14px;
+  gap: 14px;
+}
+.app-burger { font-size: 18px; cursor: pointer; }
+.app-brand { font-weight: 500; font-size: 16px; }
+.app-loc { margin: 0 auto; display: flex; align-items: center; gap: 6px; font-size: 14px; }
+.app-icons { display: flex; align-items: center; gap: 14px; }
+.app-icons i { font-size: 18px; }
+.app-avatar { width: 28px; height: 28px; background: #FFFFFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--bfc-green); font-weight: 500; font-size: 12px; }
+
+.app-layout { display: flex; min-height: 600px; }
+.app-side {
+  width: 220px;
+  background: #0F5C2A;
+  color: rgba(255,255,255,0.9);
+  flex: 0 0 220px;
+  padding: 4px 0 20px;
+}
+.app-side-group { padding: 14px 22px 4px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: rgba(255,255,255,0.55); font-weight: 500; display: flex; align-items: center; justify-content: space-between;}
+.app-side-group i { font-size: 12px; opacity: 0.7;}
+.app-side-item { padding: 8px 22px; font-size: 13px; display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.app-side-item i { font-size: 16px; opacity: 0.85;}
+.app-side-item.active { background: rgba(255,255,255,0.12); color: #FFFFFF; font-weight: 500; }
+.app-side-item:hover { background: rgba(255,255,255,0.08); }
+
+.app-main { flex: 1; background: #FFFFFF; min-width: 0; }
+
+/* List page header */
+.app-pagehead {
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.app-pagehead-left { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.app-pagehead h1 {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0;
+  color: var(--bfc-grey-900);
+}
+.app-pagehead h1 strong { font-weight: 500; }
+.app-pagehead-sub {
+  font-size: 13px;
+  color: var(--bfc-grey-500);
+}
+.app-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  background: var(--bfc-green);
+  color: #FFFFFF;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.app-cta i { font-size: 14px; }
+
+/* Filters bar */
+.app-filters {
+  background: var(--bfc-grey-50);
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--bfc-grey-200);
+  border-bottom: 1px solid var(--bfc-grey-200);
+}
+.app-fpill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #FFFFFF;
+  border: 1px solid var(--bfc-grey-300);
+  border-radius: 18px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.app-fbadge {
+  font-size: 10px;
+  color: var(--bfc-grey-700);
+  font-weight: 500;
+  background: var(--bfc-grey-200);
+  border-radius: 8px;
+  padding: 1px 5px;
+}
+.app-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  background: #FFFFFF;
+  border: 1px solid var(--bfc-grey-300);
+  border-radius: 18px;
+  font-size: 12px;
+  color: var(--bfc-grey-400);
+}
+.app-search i { color: var(--bfc-green); font-size: 12px; }
+.app-totalct { font-size: 11px; color: var(--bfc-grey-500); white-space: nowrap; }
+
+.app-fchips {
+  padding: 12px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.app-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  background: var(--bfc-grey-100);
+  border-radius: 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.app-chip i { font-size: 11px; color: var(--bfc-grey-500); }
+.app-chip.active { background: var(--bfc-green-pale); color: var(--bfc-green-dark); font-weight: 500; }
+
+.app-statusrow {
+  padding: 0 24px 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.app-stat {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  background: var(--bfc-grey-100);
+  border-radius: 14px;
+  font-size: 12px;
+  color: var(--bfc-grey-700);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.app-stat.active {
+  background: #FFFFFF;
+  color: var(--bfc-green);
+  border-color: var(--bfc-green);
+  font-weight: 500;
+}
+
+/* Table */
+.app-table { width: 100%; border-collapse: collapse; font-size: 12px; background: #FFFFFF; }
+.app-table th {
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 500;
+  color: var(--bfc-grey-700);
+  font-size: 11px;
+  border-bottom: 1px solid var(--bfc-grey-200);
+  letter-spacing: 0.3px;
+  background: var(--bfc-grey-50);
+}
+.app-table td {
+  padding: 14px 14px;
+  border-bottom: 1px solid var(--bfc-grey-100);
+  vertical-align: middle;
+  color: var(--bfc-grey-900);
+  font-size: 12px;
+}
+.app-table tr.open td { background: var(--bfc-amber-pale); }
+.app-table tr.open td:first-child {
+  border-left: 3px solid var(--bfc-amber);
+  padding-left: 11px;
+}
+.app-cell-main { font-weight: 500; color: var(--bfc-grey-900); display: block; }
+.app-cell-sub { color: var(--bfc-grey-500); font-size: 11px; display: block; margin-top: 1px; }
+.app-cid { font-weight: 500; color: var(--bfc-green); }
+
+.app-tag-active { display: inline-flex; align-items: center; padding: 3px 11px; border-radius: 10px; font-size: 10px; font-weight: 500; background: var(--bfc-green-pale); color: var(--bfc-green-dark); letter-spacing: 0.4px; }
+.app-tag-cat { background: var(--bfc-grey-100); color: var(--bfc-grey-700); }
+
+.app-shift { display: inline-flex; align-items: center; padding: 3px 10px; border-radius: 10px; font-size: 11px; font-weight: 500; }
+.app-shift.full { background: var(--bfc-green-pale); color: var(--bfc-green-dark); }
+.app-shift.half { background: #FFEDB3; color: var(--bfc-amber-dark); }
+.app-shift.absent { background: var(--bfc-red-pale); color: var(--bfc-red); }
+.app-shift.none { color: var(--bfc-grey-400); }
+
+.app-gicon { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; border-radius: 50%; font-size: 11px; margin-right: 6px; vertical-align: middle; }
+.app-gicon.f { background: #FBE7F0; color: #A04668; }
+.app-gicon.m { background: #E5EEF8; color: #3B6EA8; }
+
+.app-rowbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border-radius: 5px;
+  border: 1px solid var(--bfc-green);
+  background: #FFFFFF;
+  color: var(--bfc-green);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+}
+.app-rowbtn i { font-size: 12px; }
+.app-rowbtn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--bfc-grey-100);
+  color: var(--bfc-grey-700);
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+}
+.app-empty-cell { color: var(--bfc-grey-400); font-size: 11px; font-style: italic; }
+
+.app-pagination {
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  color: var(--bfc-grey-500);
+  background: var(--bfc-grey-50);
+  border-top: 1px solid var(--bfc-grey-200);
+}
+
+/* Detail page */
+.app-banner {
+  background: var(--bfc-grey-100);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-bottom: 1px solid var(--bfc-grey-200);
+}
+.app-back { color: var(--bfc-grey-900); font-size: 18px; cursor: pointer; }
+.app-did { font-size: 14px; font-weight: 500; letter-spacing: 0.4px; }
+.app-mark-closed { margin-left: auto; padding: 6px 14px; border: 1px solid var(--bfc-red); color: var(--bfc-red); border-radius: 16px; font-size: 12px; cursor: pointer; background: #FFFFFF; }
+.app-banner-menu { padding: 6px; font-size: 18px; color: var(--bfc-grey-700); cursor: pointer; }
+
+.app-detail-body { padding: 24px 28px; }
+.app-parties { display: flex; gap: 36px; margin-bottom: 24px; }
+.app-party { flex: 1; }
+.app-plabel { font-size: 11px; color: var(--bfc-grey-500); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
+.app-pname { font-size: 20px; font-weight: 400; line-height: 1.2; margin-bottom: 10px; max-width: 240px; }
+.app-pmeta { font-size: 13px; color: var(--bfc-grey-700); margin-bottom: 4px; display: flex; align-items: flex-start; gap: 6px; }
+.app-pmeta i { color: var(--bfc-grey-500); font-size: 14px; margin-top: 2px; flex: 0 0 14px; }
+
+.app-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--bfc-grey-200);
+  margin-bottom: 18px;
+  gap: 0;
+}
+.app-tab {
+  padding: 10px 18px;
+  font-size: 13px;
+  color: var(--bfc-grey-700);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+.app-tab i { font-size: 14px; }
+.app-tab.active { color: var(--bfc-green); border-bottom-color: var(--bfc-green); font-weight: 500; }
+
+.app-block { margin-bottom: 22px; }
+.app-block-head { font-size: 15px; font-weight: 500; margin-bottom: 10px; color: var(--bfc-grey-900); display: flex; align-items: center; justify-content: space-between; }
+.app-edit-btn { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border: 1px solid var(--bfc-green); border-radius: 14px; color: var(--bfc-green); font-size: 11px; cursor: pointer; background: #FFFFFF; }
+.app-edit-btn i { font-size: 11px; }
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 36px;
+  row-gap: 6px;
+  font-size: 13px;
+  color: var(--bfc-grey-700);
+}
+.app-grid b { color: var(--bfc-grey-900); font-weight: 500; }
+.app-grid .span { grid-column: 1 / -1; }
+
+.app-comp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bfc-green-pale2);
+  border: 1px solid #C3E2CC;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--bfc-green-dark);
+  margin-top: 6px;
+}
+.app-comp i { color: var(--bfc-green); font-size: 16px; }
+
+.app-cstep { display: flex; align-items: center; margin-bottom: 12px; font-size: 13px; color: var(--bfc-grey-900); gap: 10px; flex-wrap: wrap; }
+.app-stepnum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bfc-grey-100);
+  color: var(--bfc-grey-700);
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 8px;
+  flex: 0 0 22px;
+}
+.app-cbtn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border: 1px solid var(--bfc-green); border-radius: 18px; color: var(--bfc-green); background: #FFFFFF; font-size: 12px; font-weight: 500; cursor: pointer; font-family: inherit; }
+.app-cbtn.solid { background: var(--bfc-green); color: #FFFFFF; border-color: var(--bfc-green); }
+.app-cbtn i { font-size: 14px; }
+
+/* Modal */
+.modal {
+  background: #FFFFFF;
+  border-radius: 12px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: var(--bfc-grey-900);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  width: 480px;
+}
+.modal.wide { width: 540px; }
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px 14px;
+}
+.modal-title { font-size: 18px; font-weight: 500; color: var(--bfc-grey-900); }
+.modal-close { color: var(--bfc-green); font-size: 18px; cursor: pointer; line-height: 1; }
+.modal-div { border-top: 1px solid var(--bfc-grey-200); margin: 0; }
+.modal-body { padding: 18px 24px; }
+.modal-foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 24px 18px;
+  border-top: 1px solid var(--bfc-grey-200);
+  margin-top: 14px;
+}
+.modal-btn-cancel {
+  flex: 1;
+  padding: 11px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--bfc-grey-300);
+  font-size: 13px;
+  color: var(--bfc-grey-500);
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+}
+.modal-btn-confirm {
+  flex: 1;
+  padding: 11px;
+  border-radius: 6px;
+  background: var(--bfc-green);
+  color: #FFFFFF;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+}
+.modal-btn-confirm.disabled { background: var(--bfc-grey-300); cursor: not-allowed; }
+.modal-cta-full {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  background: var(--bfc-grey-300);
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  font-family: inherit;
+  cursor: not-allowed;
+}
+.modal-cta-full.enabled { background: var(--bfc-green); cursor: pointer; }
+
+/* Modal — photo dropzone (Step 1) */
+.m-drop {
+  border: 2px dashed #B5DBC1;
+  border-radius: 8px;
+  padding: 36px 20px;
+  text-align: center;
+  background: #FFFFFF;
+}
+.m-camera {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1.5px solid var(--bfc-grey-500);
+  border-radius: 8px;
+  color: var(--bfc-grey-500);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.m-drop-title { font-size: 15px; color: var(--bfc-grey-900); font-weight: 500; margin-bottom: 6px; }
+.m-drop-help { font-size: 12px; color: var(--bfc-grey-700); margin-bottom: 18px; }
+.m-cta-photo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  background: var(--bfc-green);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+}
+.m-cta-photo i { font-size: 14px; }
+.m-step { font-size: 14px; font-weight: 500; color: var(--bfc-grey-900); margin-bottom: 14px; }
+
+/* Modal — photo status row (Step 2) */
+.m-photo-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+.m-photo-thumb {
+  width: 54px;
+  height: 54px;
+  border-radius: 6px;
+  background: #F2F2F2;
+  border: 1px solid var(--bfc-grey-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bfc-grey-500);
+  font-size: 18px;
+  flex: 0 0 54px;
+}
+.m-photo-status { flex: 1; }
+.m-photo-text { font-size: 12px; color: var(--bfc-grey-900); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+.m-photo-text i { color: var(--bfc-green); font-size: 14px; }
+.m-progress {
+  height: 5px;
+  background: var(--bfc-green-pale);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.m-progress-bar {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 62%;
+  background: var(--bfc-green);
+  border-radius: 3px;
+}
+.m-progress-bar.full { width: 100%; }
+
+/* Modal — fields */
+.m-field { margin-bottom: 14px; position: relative; }
+.m-flabel { font-size: 12px; color: var(--bfc-grey-700); margin-bottom: 6px; display: block; font-weight: 500; }
+.m-select {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+  border: 1px solid var(--bfc-grey-300);
+  border-radius: 5px;
+  background: #FFFFFF;
+  font-size: 13px;
+  color: var(--bfc-grey-400);
+  cursor: pointer;
+}
+.m-select.filled { color: var(--bfc-grey-900); }
+.m-select.open { border-color: var(--bfc-green); border-width: 1.5px; padding: 11px; }
+.m-select i { font-size: 14px; color: var(--bfc-grey-700); }
+.m-dropdown {
+  border: 1px solid var(--bfc-grey-300);
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  background: #FFFFFF;
+  max-height: 260px;
+  overflow: auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.m-dopt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--bfc-grey-900);
+  cursor: pointer;
+  border-bottom: 1px solid var(--bfc-grey-100);
+  gap: 10px;
+}
+.m-dopt:hover { background: var(--bfc-grey-50); }
+.m-dopt-main { display: flex; align-items: center; gap: 8px; }
+.m-dopt-sub { font-size: 11px; color: var(--bfc-grey-500); white-space: nowrap; }
+.m-dadd {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  font-size: 13px;
+  color: var(--bfc-green);
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--bfc-green-pale2);
+}
+.m-dadd:hover { background: var(--bfc-green-pale); }
+.m-dadd i { font-size: 14px; }
+
+.m-time-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 12px;
+  border: 1px solid var(--bfc-grey-300);
+  border-radius: 5px;
+  background: var(--bfc-grey-50);
+  font-size: 13px;
+  color: var(--bfc-grey-900);
+}
+.m-time-row i { color: var(--bfc-grey-700); font-size: 14px; }
+.m-fhint { font-size: 11px; color: var(--bfc-grey-500); margin-top: 4px; display: block; }
+
+/* Modal — yellow time-details box (check-out confirm) */
+.m-sub { font-size: 13px; color: var(--bfc-grey-900); margin-bottom: 14px; }
+.m-info { font-size: 13px; color: var(--bfc-grey-700); margin-bottom: 7px; }
+.m-info b { color: var(--bfc-grey-900); font-weight: 500; }
+.m-yellow {
+  background: var(--bfc-yellow-box);
+  border: 1px solid var(--bfc-yellow-box-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 16px 0 10px;
+}
+.m-yellow-head { font-size: 14px; font-weight: 500; color: var(--bfc-grey-900); margin-bottom: 10px; }
+.m-tgrid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px 16px; margin-bottom: 10px; }
+.m-tlabel { font-size: 12px; color: var(--bfc-grey-700); display: block; margin-bottom: 2px; }
+.m-tval { font-size: 14px; font-weight: 500; color: var(--bfc-grey-900); display: block; }
+.m-tval.red { color: var(--bfc-red); }
+.m-tdiv { border-top: 1px solid #ECDFB7; margin: 0 0 10px; }
+
+.m-radio-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.m-radio-label { font-size: 13px; font-weight: 500; color: var(--bfc-grey-900); margin-right: 4px; }
+.m-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--bfc-grey-900);
+  padding: 4px 8px 4px 4px;
+}
+.m-rdot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--bfc-grey-400);
+  flex: 0 0 16px;
+  position: relative;
+  background: #FFFFFF;
+}
+.m-radio.sel .m-rdot { border-color: var(--bfc-green); }
+.m-radio.sel .m-rdot::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  background: var(--bfc-green);
+}
+
+.m-notes-box { margin-top: 12px; }
+.m-notes-label { font-size: 12px; color: var(--bfc-grey-700); margin-bottom: 5px; display: block; }
+.m-notes-ta {
+  display: block;
+  width: 100%;
+  min-height: 50px;
+  padding: 9px 11px;
+  border: 1px solid var(--bfc-grey-300);
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: inherit;
+  color: var(--bfc-grey-500);
+  background: #FFFFFF;
+  box-sizing: border-box;
+  resize: none;
+}
+
+/* Stepper indicator */
+.stepper {
+  display: flex;
+  align-items: center;
+  padding: 14px 22px;
+  background: var(--bfc-grey-50);
+  border-bottom: 1px solid var(--bfc-grey-200);
+  gap: 0;
+}
+.stp {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--bfc-grey-400);
+  flex: 0 0 auto;
+  width: 70px;
+  text-align: center;
+}
+.stp.act { color: var(--bfc-green); }
+.stp.dn { color: var(--bfc-grey-700); }
+.snum {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1.5px solid var(--bfc-grey-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 500;
+}
+.stp.act .snum, .stp.dn .snum { background: var(--bfc-green); color: #FFFFFF; border-color: var(--bfc-green); }
+.slabel { font-size: 10px; font-weight: 500; letter-spacing: 0.3px; }
+.conn { flex: 1; height: 1.5px; background: var(--bfc-grey-200); align-self: flex-start; margin-top: 11px; }
+.conn.dn { background: var(--bfc-green); }
+
+/* Stepper modal fields */
+.m-bhead { font-size: 15px; font-weight: 500; margin-bottom: 6px; color: var(--bfc-grey-900); }
+.m-bsub { font-size: 12px; color: var(--bfc-grey-500); margin-bottom: 18px; }
+.m-frow { display: flex; gap: 12px; margin-bottom: 14px; }
+.m-mfield {
+  margin-bottom: 14px;
+  position: relative;
+  flex: 1;
+}
+.m-mfield label {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  background: #FFFFFF;
+  padding: 0 6px;
+  font-size: 11px;
+  color: var(--bfc-green);
+  font-weight: 500;
+  z-index: 1;
+}
+.m-mfield label.muted { color: var(--bfc-grey-500); }
+.m-input {
+  display: block;
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--bfc-grey-300);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--bfc-grey-900);
+  background: #FFFFFF;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.m-input.active { border-color: var(--bfc-green); border-width: 2px; padding: 10px 11px; }
+.m-input.readonly { background: var(--bfc-grey-50); color: var(--bfc-grey-700); border-color: var(--bfc-grey-200); }
+.m-input.with-prefix { padding-left: 30px; }
+.m-prefix {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+  color: var(--bfc-grey-700);
+  pointer-events: none;
+}
+.m-info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--bfc-grey-50);
+  border: 1px solid var(--bfc-grey-200);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--bfc-grey-700);
+  margin-bottom: 8px;
+}
+.m-info-row b { color: var(--bfc-grey-900); font-weight: 500; }
+.m-stepfoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px 18px;
+  border-top: 1px solid var(--bfc-grey-200);
+  margin-top: 14px;
+}
+.m-back {
+  font-size: 13px;
+  color: var(--bfc-green);
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: inherit;
+  padding: 8px 0;
+}
+.m-next {
+  padding: 11px 24px;
+  border-radius: 6px;
+  background: var(--bfc-green);
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Add Labourer sub-modal */
+.m-sub-label {
+  font-size: 11px;
+  color: var(--bfc-grey-500);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.m-sub-label i { font-size: 12px; }
+.m-gender-row { display: flex; gap: 8px; }
+.m-gender-btn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--bfc-grey-300);
+  border-radius: 5px;
+  background: #FFFFFF;
+  font-size: 13px;
+  color: var(--bfc-grey-700);
+  cursor: pointer;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.m-gender-btn.sel { border-color: var(--bfc-green); background: var(--bfc-green-pale2); color: var(--bfc-green-dark); border-width: 1.5px; padding: 9px; }
+.m-gender-btn i { font-size: 14px; }
+.m-aadhaar-zone {
+  border: 1.5px dashed var(--bfc-grey-300);
+  border-radius: 6px;
+  padding: 14px;
+  text-align: center;
+  background: var(--bfc-grey-50);
+  font-size: 12px;
+  color: var(--bfc-grey-700);
+  cursor: pointer;
+}
+.m-aadhaar-zone i { font-size: 20px; color: var(--bfc-grey-500); margin-bottom: 6px; display: block; }
+.m-aadhaar-zone strong { color: var(--bfc-green); font-weight: 500; }
+.m-aadhaar-hint { font-size: 11px; color: var(--bfc-grey-500); margin-top: 5px; }
+
+/* Footer / closing */
+.docfoot {
+  padding: 40px 32px 60px;
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: 12px;
+  color: var(--doc-text-mute);
+  border-top: 1px solid var(--doc-border);
+  margin-top: 40px;
+}
+.docfoot h3 { font-size: 14px; font-weight: 500; color: var(--doc-text); margin: 0 0 10px; }
+.docfoot ul { margin: 0; padding-left: 18px; }
+.docfoot li { margin-bottom: 4px; line-height: 1.6; }
+
+/* Helpers */
+.viewport-tablet {
+  display: flex;
+  justify-content: center;
+  background: var(--bfc-grey-100);
+  padding: 20px;
+}
+.viewport-tablet .modal { box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+
+/* Print */
+@media print {
+  .docnav { display: none; }
+  body { background: #FFFFFF; }
+  .section { page-break-inside: avoid; padding-top: 0; }
+}
+</style>
+</head>
+<body>
+
+<nav class="docnav">
+  <span class="docnav-title"><i class="ti ti-layout-board"></i>Service Deals — Labour · Mockup set v1</span>
+  <span class="docnav-meta">BFC · Biomass Bank 3 · For Ashwin Save, Saket Mokate, Nikhil Jadhav</span>
+  <span class="docnav-links">
+    <a class="docnav-link" href="#list">1 · List</a>
+    <a class="docnav-link" href="#detail">2 · Detail</a>
+    <a class="docnav-link" href="#create">3 · Create</a>
+    <a class="docnav-link" href="#attendance">4 · Attendance</a>
+    <a class="docnav-link" href="#checkin">5 · Check-in</a>
+    <a class="docnav-link" href="#checkout">6 · Check-out</a>
+    <a class="docnav-link" href="#addlab">7 · Add Labourer</a>
+  </span>
+</nav>
+
+<div class="hero">
+  <h1>Service Deals — Labour</h1>
+  <p class="lede">Single stitched mockup set for the v1 build. Every screen the WH Manager touches, in the order they touch them. All visuals use IBM Plex Sans, the BFC green tokens, and patterns lifted directly from the existing Aggregation Deal, Ledger, and Equipment Check-in/out flows — nothing new to learn for the operator.</p>
+  <div class="hero-meta">
+    <span><b>Entity:</b> Service Deal (Labour)</span>
+    <span><b>v1 categories:</b> Labour only (Water Tanker, FOM Delivery to follow)</span>
+    <span><b>Date:</b> 20 May 2026</span>
+    <span><b>Status:</b> Draft for review</span>
+  </div>
+</div>
+
+<!-- =================== 1. SERVICE DEALS LIST =================== -->
+<section class="section" id="list">
+  <h2><span class="section-num">1</span>Service Deals — List</h2>
+  <p class="blurb">Sibling of your existing Aggregation Deals list. Same filters bar, same status pills, same table shape. The only labour-shaped addition is a Category column showing "Labour". Per-deal rates live on the detail page — kept off the list to preserve scan density.</p>
+
+  <div class="frame">
+    <div class="frame-label">Operations · WH Manager view <span class="frame-tag">Mockup</span></div>
+    <div class="frame-body">
+      <div class="app">
+        <div class="app-head">
+          <span class="app-burger"><i class="ti ti-menu-2"></i></span>
+          <span class="app-brand">BiofuelCircle</span>
+          <span class="app-loc"><i class="ti ti-map-pin"></i>Gokavaram Biomass Bank, Rajahmundry <i class="ti ti-chevron-down" style="font-size:12px"></i></span>
+          <span class="app-icons"><i class="ti ti-bell"></i><span class="app-avatar">G</span></span>
+        </div>
+        <div class="app-layout">
+          <div class="app-side">
+            <div class="app-side-group">MasterData <i class="ti ti-chevron-down"></i></div>
+            <div class="app-side-item"><i class="ti ti-users"></i>Agri-Partners</div>
+            <div class="app-side-item"><i class="ti ti-id"></i>Labourers</div>
+            <div class="app-side-item"><i class="ti ti-tractor"></i>Equipments</div>
+            <div class="app-side-group">Biomass <i class="ti ti-chevron-down"></i></div>
+            <div class="app-side-group" style="padding-left:30px">Deals <i class="ti ti-chevron-down"></i></div>
+            <div class="app-side-item" style="padding-left:46px"><i class="ti ti-arrow-down"></i>Inward Product Deal</div>
+            <div class="app-side-item" style="padding-left:46px"><i class="ti ti-handshake"></i>Aggregation Deal</div>
+            <div class="app-side-item" style="padding-left:46px"><i class="ti ti-arrow-up"></i>Outward Product Deal</div>
+            <div class="app-side-item" style="padding-left:46px"><i class="ti ti-truck"></i>Transport Deal</div>
+            <div class="app-side-item" style="padding-left:46px"><i class="ti ti-tool"></i>Equipment Rental Deal</div>
+            <div class="app-side-item active" style="padding-left:46px"><i class="ti ti-clipboard"></i>Service Deals</div>
+            <div class="app-side-group">Operations <i class="ti ti-chevron-down"></i></div>
+            <div class="app-side-item"><i class="ti ti-calendar"></i>Aggregation Plan</div>
+            <div class="app-side-item"><i class="ti ti-calendar-event"></i>Scheduling</div>
+            <div class="app-side-item"><i class="ti ti-clipboard-list"></i>Ledger</div>
+            <div class="app-side-item"><i class="ti ti-clipboard-check"></i>Attendance</div>
+          </div>
+          <div class="app-main">
+            <div class="app-pagehead">
+              <div class="app-pagehead-left">
+                <h1>Service Deals</h1>
+              </div>
+              <button class="app-cta"><i class="ti ti-plus"></i>New Service Deal</button>
+            </div>
+            <div class="app-filters">
+              <span class="app-fpill"><i class="ti ti-chevron-up"></i>Filters <span class="app-fbadge">1</span></span>
+              <span class="app-search"><i class="ti ti-search"></i>Deal Id, Service Provider name, Contact</span>
+              <span class="app-totalct">Total Count: 14</span>
+            </div>
+            <div class="app-fchips">
+              <span class="app-chip active">Active <i class="ti ti-chevron-down"></i></span>
+              <span class="app-chip">Category: Labour <i class="ti ti-x" style="font-size:10px"></i></span>
+            </div>
+            <table class="app-table">
+              <thead>
+                <tr>
+                  <th>Deal ID</th>
+                  <th>Service Provider / Contact</th>
+                  <th>Category</th>
+                  <th>Payment Terms</th>
+                  <th>Status / Start Date</th>
+                  <th>End Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="app-cid">13201</td>
+                  <td><span class="app-cell-main">Raghavendra k</span><span class="app-cell-sub">9121389363</span></td>
+                  <td><span class="app-tag-active app-tag-cat">LABOUR</span></td>
+                  <td>Weekly (Every Sunday)</td>
+                  <td><span class="app-tag-active">ACTIVE</span><span class="app-cell-sub" style="margin-top:4px">20 May 2026</span></td>
+                  <td>20 Jun 2026</td>
+                </tr>
+                <tr>
+                  <td class="app-cid">13205</td>
+                  <td><span class="app-cell-main">K srinu</span><span class="app-cell-sub">9553787598</span></td>
+                  <td><span class="app-tag-active app-tag-cat">LABOUR</span></td>
+                  <td>Weekly (Every Sunday)</td>
+                  <td><span class="app-tag-active">ACTIVE</span><span class="app-cell-sub" style="margin-top:4px">12 May 2026</span></td>
+                  <td>12 Jun 2026</td>
+                </tr>
+                <tr>
+                  <td class="app-cid">13208</td>
+                  <td><span class="app-cell-main">I srinu</span><span class="app-cell-sub">6301651363</span></td>
+                  <td><span class="app-tag-active app-tag-cat">LABOUR</span></td>
+                  <td>Monthly (Last day)</td>
+                  <td><span class="app-tag-active">ACTIVE</span><span class="app-cell-sub" style="margin-top:4px">01 May 2026</span></td>
+                  <td>31 May 2026</td>
+                </tr>
+                <tr>
+                  <td class="app-cid">13211</td>
+                  <td><span class="app-cell-main">Nallala srinivasu</span><span class="app-cell-sub">9704301518</span></td>
+                  <td><span class="app-tag-active app-tag-cat">LABOUR</span></td>
+                  <td>Weekly (Every Sunday)</td>
+                  <td><span class="app-tag-active">ACTIVE</span><span class="app-cell-sub" style="margin-top:4px">15 May 2026</span></td>
+                  <td>15 Jun 2026</td>
+                </tr>
+                <tr>
+                  <td class="app-cid">13214</td>
+                  <td><span class="app-cell-main">Prathipati Nagesh</span><span class="app-cell-sub">9398822421</span></td>
+                  <td><span class="app-tag-active app-tag-cat">LABOUR</span></td>
+                  <td>Weekly (Every Sunday)</td>
+                  <td><span class="app-tag-active">ACTIVE</span><span class="app-cell-sub" style="margin-top:4px">18 May 2026</span></td>
+                  <td>18 Jun 2026</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="app-pagination">
+              <span>Showing 5 of 14 active service deals</span>
+              <span>← Previous &nbsp;·&nbsp; Next →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <strong>What's new vs Aggregation Deals list:</strong>
+    <ul>
+      <li>New sidebar item <em>Service Deals</em> under Biomass → Deals. New <em>Labourers</em> entry under MasterData.</li>
+      <li>New sidebar item <em>Attendance</em> under Operations (sibling to Ledger).</li>
+      <li>New <em>Category</em> column with a single value in v1 ("LABOUR"). When water-tanker / FOM-delivery categories arrive, the same column accommodates them.</li>
+      <li>Rates are intentionally not shown in the list — two values per deal (Men / Women) wouldn't fit a single column without forcing a wider table. Both rates live on the detail page.</li>
+      <li>No equivalent of the Aggregation "Raking / Baling / Slashing / Trolley" chips — labour is activity-agnostic in v1.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =================== 2. SERVICE DEAL DETAIL =================== -->
+<section class="section" id="detail">
+  <h2><span class="section-num">2</span>Service Deal — Detail (Labour)</h2>
+  <p class="blurb">Direct clone of your Aggregation Deal detail. Only changes: a Category chip in the banner, separate Men / Women per-day rates in Payment Terms, and the Cashflow tab renamed to Attendance Cashflow because labour billing flows from attendance rather than deliveries.</p>
+
+  <div class="frame">
+    <div class="frame-label">Service Deal detail · ID 13201 <span class="frame-tag">Mockup</span></div>
+    <div class="frame-body">
+      <div class="app">
+        <div class="app-head">
+          <span class="app-burger"><i class="ti ti-menu-2"></i></span>
+          <span class="app-brand">BiofuelCircle</span>
+          <span class="app-loc"><i class="ti ti-map-pin"></i>Gokavaram Biomass Bank, Rajahmundry <i class="ti ti-chevron-down" style="font-size:12px"></i></span>
+          <span class="app-icons"><i class="ti ti-bell"></i><span class="app-avatar">G</span></span>
+        </div>
+        <div class="app-banner">
+          <span class="app-back"><i class="ti ti-arrow-left"></i></span>
+          <span class="app-did">DEAL ID: 13201</span>
+          <span class="app-tag-active">ACTIVE</span>
+          <span class="app-tag-active app-tag-cat">LABOUR</span>
+          <button class="app-mark-closed">Mark as closed</button>
+          <span class="app-banner-menu"><i class="ti ti-dots-vertical"></i></span>
+        </div>
+        <div class="app-detail-body">
+          <div class="app-parties">
+            <div class="app-party">
+              <div class="app-plabel">Service Provider</div>
+              <div class="app-pname">Raghavendra k</div>
+              <div class="app-pmeta"><i class="ti ti-map-pin"></i>East Godavari, Andhra Pradesh</div>
+              <div class="app-pmeta"><i class="ti ti-phone"></i>9121389363</div>
+            </div>
+            <div class="app-party">
+              <div class="app-plabel">Buyer</div>
+              <div class="app-pname">BFC Supply Private Limited</div>
+              <div class="app-pmeta"><i class="ti ti-map-pin"></i>Gokavaram Biomass Bank, Rajahmundry, Andhra Pradesh</div>
+              <div class="app-pmeta"><i class="ti ti-phone"></i>2048522522</div>
+            </div>
+          </div>
+
+          <div class="app-tabs">
+            <div class="app-tab active"><i class="ti ti-info-circle"></i>Deal Details</div>
+            <div class="app-tab"><i class="ti ti-chart-bar"></i>Activity</div>
+            <div class="app-tab"><i class="ti ti-coin"></i>Attendance Cashflow</div>
+            <div class="app-tab"><i class="ti ti-file-text"></i>History</div>
+          </div>
+
+          <div class="app-block">
+            <div class="app-block-head">Payment Terms <button class="app-edit-btn"><i class="ti ti-edit"></i>Edit</button></div>
+            <div class="app-grid">
+              <div>Method of compensation: <b>Per Day</b></div>
+              <div>Payment Terms: <b>Weekly (Every Sunday)</b></div>
+              <div>Men rate: <b>₹1,650</b> <span style="color:var(--bfc-grey-500)">per day</span></div>
+              <div>Women rate: <b>₹1,500</b> <span style="color:var(--bfc-grey-500)">per day</span></div>
+            </div>
+          </div>
+
+          <div class="app-block">
+            <div class="app-block-head">Other Details <button class="app-edit-btn"><i class="ti ti-edit"></i>Edit</button></div>
+            <div class="app-grid">
+              <div>Valid from: <b>20 May 2026</b></div>
+              <div>End date: <b>20 Jun 2026</b></div>
+            </div>
+          </div>
+
+          <div class="app-block">
+            <div class="app-block-head">Contract Details</div>
+            <div class="app-cstep">
+              <span class="app-stepnum">1</span>Share the contract with Raghavendra k:
+              <button class="app-cbtn"><i class="ti ti-download"></i>Download PDF</button>
+              <span style="color:var(--bfc-grey-500)">or</span>
+              <button class="app-cbtn solid"><i class="ti ti-brand-whatsapp"></i>Send on WhatsApp</button>
+            </div>
+            <div class="app-cstep">
+              <span class="app-stepnum">2</span>Get it reviewed and signed by Raghavendra k.
+            </div>
+            <div class="app-cstep">
+              <span class="app-stepnum">3</span>Upload the signed copy:
+              <button class="app-cbtn"><i class="ti ti-cloud-upload"></i>Upload signed copy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <strong>Decisions inherited from your existing patterns:</strong>
+    <ul>
+      <li>Edit pencil per section (same as Aggregation Deal detail).</li>
+      <li>"Mark as closed" pill at top right (same as your existing deal pages).</li>
+      <li>Two-party banner layout (Agri-Partner left, Buyer right) — identical structure.</li>
+      <li>Three-step Contract Details strip — Download PDF / Send on WhatsApp / Upload signed copy.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =================== 3. CREATE SERVICE DEAL =================== -->
+<section class="section" id="create">
+  <h2><span class="section-num">3</span>Create Service Deal (Labour) — long-scroll modal</h2>
+  <p class="blurb">Single long-scroll modal matching your existing Create Aggregation Deal pattern. Sections stack vertically — Deal details, Pricing &amp; Payment terms, Other details — with a single Cancel / Create footer. No stepper, no Back / Next, no enforced order. The WH Manager fills what they have and creates when ready.</p>
+
+  <div class="frame">
+    <div class="frame-label">Modal · single form, sections stacked <span class="frame-tag">Mockup</span></div>
+    <div class="frame-body modal-stage" style="align-items:flex-start;">
+      <div class="modal" style="width:600px;">
+        <div class="modal-head">
+          <span class="modal-title">Create Service Deal</span>
+          <span class="modal-close">×</span>
+        </div>
+        <hr class="modal-div">
+        <div class="modal-body" style="padding:20px 24px 8px;">
+
+          <!-- Section A: Deal details -->
+          <div style="margin-bottom:22px;">
+            <h4 style="font-size:15px;font-weight:500;margin:0 0 14px;color:var(--bfc-grey-900);">Deal details</h4>
+
+            <div class="m-frow">
+              <div class="m-mfield">
+                <label class="muted">Buyer</label>
+                <input class="m-input readonly" value="BFC Supplier" readonly>
+              </div>
+              <div class="m-mfield">
+                <label class="muted">Location</label>
+                <div class="m-input readonly" style="display:flex;align-items:center;gap:6px;"><i class="ti ti-map-pin" style="color:var(--bfc-grey-700);font-size:14px;"></i>Gokavaram Biomass Bank, Rajahmundry</div>
+              </div>
+            </div>
+
+            <div class="m-mfield">
+              <label class="muted">Category</label>
+              <div class="m-input readonly" style="display:flex;align-items:center;gap:8px;"><span class="app-tag-active app-tag-cat">LABOUR</span><span style="color:var(--bfc-grey-500);font-size:11px;">v1 — other categories coming later</span></div>
+            </div>
+
+            <div class="m-mfield">
+              <label>Service Provider</label>
+              <div class="m-select filled" style="display:flex;align-items:center;justify-content:space-between;"><span><b>Raghavendra k</b> · 9121389363</span><i class="ti ti-chevron-down"></i></div>
+            </div>
+          </div>
+
+          <!-- Section B: Pricing -->
+          <div style="margin-bottom:22px;padding-top:18px;border-top:1px solid var(--bfc-grey-100);">
+            <h4 style="font-size:15px;font-weight:500;margin:0 0 4px;color:var(--bfc-grey-900);">Pricing and Payment terms</h4>
+            <p style="font-size:12px;color:var(--bfc-grey-500);margin:0 0 14px;">Per-day basis. Separate rate for men and women labourers.</p>
+
+            <div class="m-frow">
+              <div class="m-mfield">
+                <label>Men rate · per day</label>
+                <span class="m-prefix">₹</span>
+                <input class="m-input with-prefix" value="1,650">
+              </div>
+              <div class="m-mfield">
+                <label>Women rate · per day</label>
+                <span class="m-prefix">₹</span>
+                <input class="m-input with-prefix" value="1,500">
+              </div>
+            </div>
+
+            <div class="m-mfield">
+              <label>Payment terms</label>
+              <select class="m-input"><option>Weekly (Every Sunday)</option></select>
+            </div>
+          </div>
+
+          <!-- Section C: Other details -->
+          <div style="margin-bottom:22px;padding-top:18px;border-top:1px solid var(--bfc-grey-100);">
+            <h4 style="font-size:15px;font-weight:500;margin:0 0 14px;color:var(--bfc-grey-900);">Other details</h4>
+
+            <div class="m-frow">
+              <div class="m-mfield">
+                <label>Valid From</label>
+                <input class="m-input" value="20 May 2026">
+              </div>
+              <div class="m-mfield">
+                <label>End Date</label>
+                <input class="m-input" value="20 Jun 2026">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-foot">
+          <button class="modal-btn-cancel">Cancel</button>
+          <button class="modal-btn-confirm">Create</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <strong>Why long-scroll, not stepper:</strong>
+    <ul>
+      <li><b>Matches your existing Create Aggregation Deal modal exactly</b> — same sections-stacked-vertically pattern, same single Cancel / Create footer at the bottom. WH Managers don't learn a new flow.</li>
+      <li><b>No Back / Next friction.</b> If the user wants to tweak the rate after picking dates, they just scroll up. The stepper forced a linear motion that didn't match how people actually think about a contract.</li>
+      <li><b>Category surfaced but not pickable in v1</b> — shown as a read-only LABOUR tag in the Deal details section. When water-tanker / FOM-delivery categories arrive, this becomes a real dropdown without restructuring the modal.</li>
+      <li><b>Two rate fields, not one</b> — Men rate and Women rate, both required, both editable. The contractor sets them at deal creation; attendance check-out picks the right rate from the labourer's gender automatically.</li>
+      <li><b>After Create:</b> the modal closes and lands on the Service Deal detail page (Section 2), where the Contract Details block lets the user download the PDF, send on WhatsApp, and upload the signed copy.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =================== 4. ATTENDANCE LIST =================== -->
+<section class="section" id="attendance">
+  <h2><span class="section-num">4</span>Attendance — List</h2>
+  <p class="blurb">Daily working surface. Same shape as your Ledger — filters bar, status pills, table. Open rows (checked-in but no check-out yet) get a soft amber background and a left-edge accent so the WH Manager spots pending work at a glance. The green outlined <em>Check-out</em> button sits at the row's right edge.</p>
+
+  <div class="frame">
+    <div class="frame-label">Operations · WH Manager view <span class="frame-tag">Mockup</span></div>
+    <div class="frame-body">
+      <div class="app">
+        <div class="app-head">
+          <span class="app-burger"><i class="ti ti-menu-2"></i></span>
+          <span class="app-brand">BiofuelCircle</span>
+          <span class="app-loc"><i class="ti ti-map-pin"></i>Gokavaram Biomass Bank, Rajahmundry <i class="ti ti-chevron-down" style="font-size:12px"></i></span>
+          <span class="app-icons"><i class="ti ti-bell"></i><span class="app-avatar">G</span></span>
+        </div>
+        <div class="app-pagehead">
+          <div class="app-pagehead-left">
+            <h1>Attendance <strong>Today</strong> <i class="ti ti-chevron-down" style="font-size:14px;color:var(--bfc-grey-700)"></i> <span class="app-pagehead-sub">(20 May 2026)</span></h1>
+          </div>
+          <button class="app-cta"><i class="ti ti-plus"></i>Check-in</button>
+        </div>
+        <div class="app-filters">
+          <span class="app-fpill"><i class="ti ti-chevron-up"></i>Filters <span class="app-fbadge">0</span></span>
+          <span class="app-search"><i class="ti ti-search"></i>Deal Id, Labourer, Service Provider</span>
+          <span class="app-totalct">Total Logs: 6</span>
+        </div>
+        <div class="app-fchips">
+          <span class="app-chip">Gender <i class="ti ti-chevron-down"></i></span>
+          <span class="app-chip">Service Provider <i class="ti ti-chevron-down"></i></span>
+          <span class="app-chip">Attendance <i class="ti ti-chevron-down"></i></span>
+        </div>
+        <div class="app-statusrow">
+          <span class="app-stat active">Checked-in (2)</span>
+          <span class="app-stat">Checked-out (4)</span>
+          <span class="app-stat">Absent (0)</span>
+        </div>
+        <table class="app-table">
+          <thead>
+            <tr>
+              <th>Deal ID</th>
+              <th>Service Provider / Contact</th>
+              <th>Labourer</th>
+              <th>Check-in</th>
+              <th>Check-out</th>
+              <th>Attendance</th>
+              <th>Notes</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="open">
+              <td class="app-cid">13205</td>
+              <td><span class="app-cell-main">K srinu</span><span class="app-cell-sub">9553787598</span></td>
+              <td><span class="app-gicon f"><i class="ti ti-venus"></i></span>Lakshmi Bai</td>
+              <td><span class="app-cell-main">08:45 AM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-empty-cell">—</span></td>
+              <td><span class="app-shift none">—</span></td>
+              <td><span class="app-empty-cell">—</span></td>
+              <td><button class="app-rowbtn"><i class="ti ti-logout"></i>Check-out</button></td>
+            </tr>
+            <tr class="open">
+              <td class="app-cid">13205</td>
+              <td><span class="app-cell-main">K srinu</span><span class="app-cell-sub">9553787598</span></td>
+              <td><span class="app-gicon m"><i class="ti ti-mars"></i></span>Anand Reddy</td>
+              <td><span class="app-cell-main">09:00 AM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-empty-cell">—</span></td>
+              <td><span class="app-shift none">—</span></td>
+              <td><span class="app-empty-cell">—</span></td>
+              <td><button class="app-rowbtn"><i class="ti ti-logout"></i>Check-out</button></td>
+            </tr>
+            <tr>
+              <td class="app-cid">13201</td>
+              <td><span class="app-cell-main">Raghavendra k</span><span class="app-cell-sub">9121389363</span></td>
+              <td><span class="app-gicon f"><i class="ti ti-venus"></i></span>Sita Devi</td>
+              <td><span class="app-cell-main">09:12 AM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-cell-main">05:42 PM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-shift full">Full Day</span></td>
+              <td><span class="app-empty-cell">—</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="app-cid">13201</td>
+              <td><span class="app-cell-main">Raghavendra k</span><span class="app-cell-sub">9121389363</span></td>
+              <td><span class="app-gicon m"><i class="ti ti-mars"></i></span>Ramesh Kumar</td>
+              <td><span class="app-cell-main">09:15 AM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-cell-main">01:30 PM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-shift half">Half Day</span></td>
+              <td>Family event</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="app-cid">13201</td>
+              <td><span class="app-cell-main">Raghavendra k</span><span class="app-cell-sub">9121389363</span></td>
+              <td><span class="app-gicon f"><i class="ti ti-venus"></i></span>Padma</td>
+              <td><span class="app-cell-main">09:20 AM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-cell-main">05:30 PM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-shift full">Full Day</span></td>
+              <td><span class="app-empty-cell">—</span></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="app-cid">13208</td>
+              <td><span class="app-cell-main">I srinu</span><span class="app-cell-sub">6301651363</span></td>
+              <td><span class="app-gicon m"><i class="ti ti-mars"></i></span>Venkat Rao</td>
+              <td><span class="app-cell-main">10:00 AM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-cell-main">10:18 AM</span><span class="app-cell-sub">20 May 2026</span></td>
+              <td><span class="app-shift absent">Absent</span></td>
+              <td>Left after 18 mins — reason logged</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="app-pagination">
+          <span>Showing 6 of 6 logs · 20 May 2026</span>
+          <span>← Previous &nbsp;·&nbsp; Next →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <strong>Three small things baked in:</strong>
+    <ul>
+      <li>Default tab is <em>Checked-in</em> (the action items) rather than Checked-out.</li>
+      <li>Gender as a coloured circle icon, not text — faster scan, low-literacy friendly.</li>
+      <li>Absent rows take the red shift chip (see Venkat Rao's row) — visually distinct from billed half / full days.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =================== 5. CHECK-IN POPUP =================== -->
+<section class="section" id="checkin">
+  <h2><span class="section-num">5</span>Check-in popup (Steps 1 + 2)</h2>
+  <p class="blurb">Two-step modal mirroring your existing Equipment Check-in/out flow. Step 1 captures the attendance photo. Step 2 uploads it async while the WH Manager links the labourer to a Labour Contract. The <em>+ Add new labourer</em> path inside the picker opens a sub-modal (Section 7).</p>
+
+  <div class="frame">
+    <div class="frame-label">Step 1 of 2 · Photo capture <span class="frame-tag">Mockup</span></div>
+    <div class="frame-body modal-stage">
+      <div class="modal">
+        <div class="modal-head">
+          <span class="modal-title">Labourer Check-in</span>
+          <span class="modal-close">×</span>
+        </div>
+        <hr class="modal-div">
+        <div class="modal-body">
+          <div class="m-step">Step 1</div>
+          <div class="m-drop">
+            <div class="m-camera"><i class="ti ti-camera"></i></div>
+            <div class="m-drop-title">Add Image</div>
+            <div class="m-drop-help">Ensure the labourer's face is clearly visible in the photo.</div>
+            <button class="m-cta-photo"><i class="ti ti-camera"></i>Take a photo &amp; Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame">
+    <div class="frame-label">Step 2 of 2 · Link · dropdown open <span class="frame-tag">Mockup</span></div>
+    <div class="frame-body modal-stage">
+      <div class="modal">
+        <div class="modal-head">
+          <span class="modal-title">Labourer Check-in</span>
+          <span class="modal-close">×</span>
+        </div>
+        <hr class="modal-div">
+        <div class="modal-body">
+          <div class="m-photo-row">
+            <div class="m-photo-thumb"><i class="ti ti-photo"></i></div>
+            <div class="m-photo-status">
+              <div class="m-photo-text">Uploading photo in the background… you can continue filling out the form</div>
+              <div class="m-progress"><div class="m-progress-bar"></div></div>
+            </div>
+          </div>
+          <div class="m-step">Step 2</div>
+
+          <div class="m-field">
+            <span class="m-flabel">Labour Contract</span>
+            <div class="m-select">Search Labour Contract ID or Service Provider… <i class="ti ti-chevron-down"></i></div>
+          </div>
+
+          <div class="m-field">
+            <span class="m-flabel">Labourer</span>
+            <div class="m-select open">Search Labourer by name or phone… <i class="ti ti-chevron-up"></i></div>
+            <div class="m-dropdown">
+              <div class="m-dopt"><div class="m-dopt-main"><span class="app-gicon f"><i class="ti ti-venus"></i></span>Sita Devi</div><span class="m-dopt-sub">9876543210 · ID ✓</span></div>
+              <div class="m-dopt"><div class="m-dopt-main"><span class="app-gicon f"><i class="ti ti-venus"></i></span>Padma</div><span class="m-dopt-sub">no phone · ID ✓</span></div>
+              <div class="m-dopt"><div class="m-dopt-main"><span class="app-gicon m"><i class="ti ti-mars"></i></span>Ramesh Kumar</div><span class="m-dopt-sub">9123456789 · ID ✓</span></div>
+              <div class="m-dopt"><div class="m-dopt-main"><span class="app-gicon f"><i class="ti ti-venus"></i></span>Lakshmi Bai</div><span class="m-dopt-sub">no phone · ID ✓</span></div>
+              <div class="m-dadd"><i class="ti ti-plus"></i>Add new labourer</div>
+            </div>
+          </div>
+
+          <div class="m-field">
+            <span class="m-flabel">Time &amp; Date</span>
+            <div class="m-time-row">20 May 2026, 9:15 AM <i class="ti ti-calendar"></i></div>
+            <span class="m-fhint">Defaults to now. Editable for late entries.</span>
+          </div>
+
+          <button class="modal-cta-full">Check-in</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <strong>Patterns lifted from your Equipment Check-in/out modal:</strong>
+    <ul>
+      <li>Step 1 dashed dropzone + green pill CTA — pixel-equivalent to your existing photo step.</li>
+      <li>Async photo upload row at top of Step 2 with the green progress bar.</li>
+      <li>The "+ Add new labourer" footer row sits in a soft green band — same affordance as a system-suggested option.</li>
+      <li><strong>Conflict handling (for free):</strong> if a labourer is already checked-in somewhere else today, the same red "Conflict Detected" panel from the equipment flow appears between the Contract picker and the Time field.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =================== 6. CHECK-OUT POPUP =================== -->
+<section class="section" id="checkout">
+  <h2><span class="section-num">6</span>Check-out popup (Confirm step)</h2>
+  <p class="blurb">Direct sibling of your "Confirm Equipment Check-in" modal. Yellow Time Details box. The three-option Attendance radio (Absent / Half Day / Full Day) sits inside the same yellow box, exactly like equipment. If <em>Absent</em> is selected, a red reason panel appears below and Notes becomes required.</p>
+
+  <div class="frame">
+    <div class="frame-label">Confirm Check-out · Full Day selected <span class="frame-tag">Mockup</span></div>
+    <div class="frame-body modal-stage">
+      <div class="modal">
+        <div class="modal-head">
+          <span class="modal-title">Confirm Check-out</span>
+          <span class="modal-close">×</span>
+        </div>
+        <hr class="modal-div">
+        <div class="modal-body">
+          <div class="m-sub">Review the details below and confirm your check-out.</div>
+          <div class="m-photo-row">
+            <div class="m-photo-thumb"><i class="ti ti-photo"></i></div>
+            <div class="m-photo-status">
+              <div class="m-photo-text"><i class="ti ti-circle-check"></i>Check-out photo uploaded.</div>
+            </div>
+          </div>
+          <div class="m-info">Date &amp; Time: <b>20 May 2026, 5:42 PM</b></div>
+          <div class="m-info">Deal ID: <b>13201</b> (Raghavendra k, 9121389363)</div>
+          <div class="m-info">Labourer: <b>Sita Devi</b> (Female)</div>
+
+          <div class="m-yellow">
+            <div class="m-yellow-head">Time Details</div>
+            <div class="m-tgrid">
+              <div><span class="m-tlabel">Start Time:</span><span class="m-tval">9:12 AM</span></div>
+              <div><span class="m-tlabel">End Time:</span><span class="m-tval">5:42 PM</span></div>
+              <div><span class="m-tlabel">Total Time:</span><span class="m-tval red">8 hrs 30 mins</span></div>
+            </div>
+            <hr class="m-tdiv">
+            <div class="m-radio-row">
+              <span class="m-radio-label">Attendance:</span>
+              <span class="m-radio"><span class="m-rdot"></span>Absent</span>
+              <span class="m-radio"><span class="m-rdot"></span>Half Day</span>
+              <span class="m-radio sel"><span class="m-rdot"></span>Full Day</span>
+            </div>
+          </div>
+
+          <div class="m-notes-box">
+            <span class="m-notes-label">Notes (optional)</span>
+            <textarea class="m-notes-ta" placeholder="Any remarks…"></textarea>
+          </div>
+        </div>
+        <div class="modal-foot">
+          <button class="modal-btn-cancel">No, Cancel</button>
+          <button class="modal-btn-confirm">Confirm Check-out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <strong>Tight calls in this modal — explicit so they don't get lost:</strong>
+    <ul>
+      <li><b>No default Attendance selection.</b> WH Manager must consciously pick. Mis-billing risk avoided.</li>
+      <li><b>Total Time is shown in red</b> to match your existing equipment confirm modal.</li>
+      <li><b>If Absent is selected:</b> a red reason panel appears below the yellow box (same shape as the "equipment-not-returned" panel) and the Notes field becomes required.</li>
+      <li><b>Confirm button copy stays "Confirm Check-out"</b> regardless of Attendance pick — the action is the same, only the recorded value differs.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- =================== 7. ADD LABOURER POPUP-ON-POPUP =================== -->
+<section class="section" id="addlab">
+  <h2><span class="section-num">7</span>Add Labourer — popup-on-popup</h2>
+  <p class="blurb">Triggered from the <em>+ Add new labourer</em> row inside the Check-in modal's Labourer picker. Single-screen sub-modal. Four fields. Address proof verification document is required. Treated as an exception to the "no popup-on-popup" guideline because forcing the WH Manager to leave the gate flow would push them back to paper.</p>
+
+  <div class="frame">
+    <div class="frame-label">Sub-modal · Add Labourer <span class="frame-tag">Mockup</span></div>
+    <div class="frame-body modal-stage">
+      <div class="modal">
+        <div class="modal-head">
+          <span class="modal-title">Add Labourer</span>
+          <span class="modal-close">×</span>
+        </div>
+        <hr class="modal-div">
+        <div class="modal-body">
+          <div class="m-sub-label"><i class="ti ti-arrow-back-up"></i>From: Labourer picker · Deal 13201 check-in</div>
+
+          <div class="m-field" style="margin-bottom:20px">
+            <div class="m-mfield" style="margin-bottom:0">
+              <label>Name <span style="color:var(--bfc-red)">*</span></label>
+              <input class="m-input active" value="Anjamma Reddy">
+            </div>
+          </div>
+
+          <div class="m-field" style="margin-bottom:20px">
+            <div class="m-mfield" style="margin-bottom:0">
+              <label class="muted">Phone (optional)</label>
+              <input class="m-input" placeholder="10-digit mobile number">
+            </div>
+          </div>
+
+          <div class="m-field" style="margin-bottom:18px">
+            <span class="m-flabel">Gender <span style="color:var(--bfc-red)">*</span></span>
+            <div class="m-gender-row">
+              <button class="m-gender-btn sel"><i class="ti ti-venus"></i>Female</button>
+              <button class="m-gender-btn"><i class="ti ti-mars"></i>Male</button>
+              <button class="m-gender-btn"><i class="ti ti-genderless"></i>Other</button>
+            </div>
+          </div>
+
+          <div class="m-field" style="margin-bottom:8px">
+            <span class="m-flabel">Address proof verification document <span style="color:var(--bfc-red)">*</span></span>
+            <div class="m-aadhaar-zone">
+              <i class="ti ti-upload"></i>
+              Tap to <strong>upload verification document</strong> or take photo
+              <div class="m-aadhaar-hint">Photocopy or photo is fine. Any government-issued address proof.</div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-foot">
+          <button class="modal-btn-cancel">Cancel</button>
+          <button class="modal-btn-confirm">Save &amp; Use</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <strong>Why this modal exists in this shape:</strong>
+    <ul>
+      <li><b>Save &amp; Use</b> (not just Save) — the action returns the user to the Check-in modal with the new labourer preselected, so the gate flow doesn't break.</li>
+      <li><b>Address proof is required.</b> No "Add later" skip. The form is short enough that asking up-front is acceptable.</li>
+      <li><b>Phone is optional</b> because many labourers don't have one. Dedup falls to manual when phone is missing.</li>
+      <li><b>Dedup hint:</b> if a labourer with the typed Name + Gender combination already exists, a suggestion strip appears above the field — "Did you mean Anjamma Reddy (Female, no phone)? Last worked at this bank on 18 May." Single tap reuses the existing record.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Footer summary -->
+<div class="docfoot">
+  <h3>About this document</h3>
+  <ul>
+    <li><b>Audience:</b> Ashwin Save, Saket Mokate, Nikhil Jadhav.</li>
+    <li><b>Source:</b> Stitches together every screen-level decision from the PRD (service-contracts-prd.docx) and the design spec (labour-contract-design-spec.md).</li>
+    <li><b>Conventions:</b> IBM Plex Sans throughout. BFC green (#1B8438) as the primary; yellow Time Details box and red Total Time copied from the existing Equipment Check-in modal. No new components — every block reuses a pattern already shipping in Aggregation Deal, Ledger, or Equipment Check-in/out.</li>
+    <li><b>v1 categories:</b> Labour only. Water Tanker and FOM Delivery are anticipated in the schema but not built.</li>
+    <li><b>Out of scope for v1 (still):</b> Reccon-style enterprise staffing with PF/ESI/bonus payslip math, hourly billing, per-activity tracking, offline support, WhatsApp self-check-in.</li>
+    <li><b>Open questions still on the table:</b> default Attendance selection (none vs Half Day) · Hindi/regional translation of gate strings · Reccon Excel ingestion in parallel during v1.</li>
+  </ul>
+</div>
+
+</body>
+</html>
